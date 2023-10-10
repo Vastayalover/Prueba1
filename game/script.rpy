@@ -2,6 +2,10 @@
 define hombre = Character ("Miguelin",color="#3343AA")
 define jugador = Character ("Bautista",color="4E4C4E")
 
+
+        #PUTO EL QUE LEA
+
+
 label start:
 
     scene tren_fuera_dia
