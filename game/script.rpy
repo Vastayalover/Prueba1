@@ -16,18 +16,18 @@ label start:
 
 scene tren_fuera_dia
  
-        "Te diriges de camino a la escuela en tren como todos los dias"
-        "..."
-        "preferirias no ir, el bullying por llamarte bautista esta presente todos los dias"
-        "..."
-        "aun asi vas, tal vez hoy sea un buen dia"
+"Te diriges de camino a la escuela en tren como todos los dias"
+"..."
+"preferirias no ir, el bullying por llamarte bautista esta presente todos los dias"
+"..."
+"aun asi vas, tal vez hoy sea un buen dia"
 
 show miguelin3 
-        hombre "quionda bautizardo"
-        jugador "todo bien pa?"
-        hombre "estoy re manija"
-        hombre "hoy juega veleeeeeeeez"
-        hombre "te pinta la previa con unos choris en mi casa? :D"
+hombre "quionda bautizardo"
+jugador "todo bien pa?"
+hombre "estoy re manija"
+hombre "hoy juega veleeeeeeeez"
+hombre "te pinta la previa con unos choris en mi casa? :D"
 
 
 $ir_con_miguelin = True
@@ -43,27 +43,27 @@ menu:
 
 hide miguelin3 with dissolve
     
-        "que buen amigo que es :D"
+"que buen amigo que es :D"
 
         #cambia la escena al tren vacio
         
 scene tren_vacio_dia
 
-        "al menos alcanze a tener un buen lugar"
+"al menos alcanze a tener un buen lugar"
 
         #cambia la escena a la entrada de la escuela
 scene entrada_escuela
 
-        "parece que llege temprano esta vez"
+"parece que llege temprano esta vez"
 
 #entra marina
 
-        mujer "Holiiiiii :3"
-        "??"
+mujer "Holiiiiii :3"
+"??"
 show marina2 with dissolve
-        "ah, solo es marina, dios,cada vez que la veo esta mas linda"  
-        mujer "queria preguntarte algo"
-        mujer "hoy en mi casa van a ver un partido ¿te gustaria venir conmigo?"
+"ah, solo es marina, dios,cada vez que la veo esta mas linda"  
+mujer "queria preguntarte algo"
+mujer "hoy en mi casa van a ver un partido ¿te gustaria venir conmigo?"
 
 $ir_con_marina=True 
 
@@ -74,20 +74,20 @@ menu:
         "dejame que lo piense":
                 $ir_con_marina=False 
 
-        mujer "mmnm oki"
-        mujer "nos vemos mas tarde"
+mujer "mmnm oki"
+mujer "nos vemos mas tarde"
        
 hide marina2
 scene escuela_afuera_tarde
 
-        "al fin terminaron las clases"
+"al fin terminaron las clases"
 
 show miguelin3 at right
 show marina2 at left
 with dissolve
 
-        "mierda"
-        hombre "vamos a casa mono?"
+"mierda"
+hombre "vamos a casa mono?"
 
 if ir_con_marina==True:
                 hide marina2
