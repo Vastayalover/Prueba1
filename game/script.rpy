@@ -4,28 +4,32 @@ define jugador = Character ("Bautista",color="4E4C4E")
 
 
         #PUTO EL QUE LEA
-#TU VIEJA ES PUTA
+
+        #TU VIEJA ES PUTA
+        
+        #xdxdxdxd lol
+
 
 label start:
 
-    scene tren_fuera_dia
+scene tren_fuera_dia
  
-    "Te diriges de camino a la escuela en tren como todos los dias"
-    "..."
-    "preferirias no ir, el bullying por llamarte bautista esta presente todos los dias"
-    "..."
-    "aun asi vas, tal vez hoy sea un buen dia"
+        "Te diriges de camino a la escuela en tren como todos los dias"
+        "..."
+        "preferirias no ir, el bullying por llamarte bautista esta presente todos los dias"
+        "..."
+        "aun asi vas, tal vez hoy sea un buen dia"
 
-    show miguelin3 
-    hombre "quionda bautizardo"
-    jugador "todo bien pa?"
-    hombre "estoy re manija"
-    hombre "hoy juega veleeeeeeeez"
-    hombre "te pinta la previa con unos choris en mi casa? :D"
+show miguelin3 
+        hombre "quionda bautizardo"
+        jugador "todo bien pa?"
+        hombre "estoy re manija"
+        hombre "hoy juega veleeeeeeeez"
+        hombre "te pinta la previa con unos choris en mi casa? :D"
 
 
-    $ir_con_miguelin = True
-    menu: 
+$ir_con_miguelin = True
+menu: 
         "De una wacho":
                         call respuesta4
                         $ir_con_miguelin =True
@@ -35,53 +39,53 @@ label start:
                                 $ir_con_miguelin = False
 
 
-    hide miguelin3 with dissolve
+hide miguelin3 with dissolve
     
-    "que buen amigo que es :D"
+        "que buen amigo que es :D"
 
         #cambia la escena al tren vacio
         
-    scene tren_vacio_dia
+scene tren_vacio_dia
 
-    "al menos alcanze a tener un buen lugar"
+        "al menos alcanze a tener un buen lugar"
 
         #cambia la escena a la entrada de la escuela
-    scene entrada_escuela
+scene entrada_escuela
 
-    "parece que llege temprano esta vez"
+        "parece que llege temprano esta vez"
 
-    #entra marina
+#entra marina
 
-    mujer "Holiiiiii :3"
-    "??"
-    show marina2 with dissolve
-    "ah, solo es marina, dios,cada vez que la veo esta mas linda"  
-    mujer "queria preguntarte algo"
-    mujer "hoy en mi casa van a ver un partido ¿te gustaria venir conmigo?"
+        mujer "Holiiiiii :3"
+        "??"
+show marina2 with dissolve
+        "ah, solo es marina, dios,cada vez que la veo esta mas linda"  
+        mujer "queria preguntarte algo"
+        mujer "hoy en mi casa van a ver un partido ¿te gustaria venir conmigo?"
 
-    $ir_con_marina=True 
+$ir_con_marina=True 
 
-    menu: 
+menu: 
         "bueno":
                 $ir_con_marina=True 
 
         "dejame que lo piense":
                 $ir_con_marina=False 
 
-    mujer "mmnm oki"
-    mujer "nos vemos mas tarde"
+        mujer "mmnm oki"
+        mujer "nos vemos mas tarde"
        
-    hide marina2
-    scene escuela_afuera_tarde
+hide marina2
+scene escuela_afuera_tarde
 
-    "al fin terminaron las clases"
+        "al fin terminaron las clases"
 
-    show miguelin3 at right
-    show marina2 at left
-    with dissolve
+show miguelin3 at right
+show marina2 at left
+with dissolve
 
-    "mierda"
-    hombre "vamos a casa mono?"
+        "mierda"
+        hombre "vamos a casa mono?"
 
 if ir_con_marina==True:
                 hide marina2
@@ -103,11 +107,11 @@ $ir_con=True #true es ir con marina y false miguelin
 
 menu:
                 
-         "ir con marina":
+        "ir con marina":
                 $ir_con=True
 
-         "ir con miguelin":
-                 $ir_con=False
+        "ir con miguelin":
+                $ir_con=False
 
 if ir_con==True:
         hide marina_triste
@@ -134,7 +138,7 @@ return #return del label start
 
 label respuesta4:  
         
-            hombre "joya pa, te veo a la salida de la escuela"
+        hombre "joya pa, te veo a la salida de la escuela"
 return
 
 label respuesta5:
