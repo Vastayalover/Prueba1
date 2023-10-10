@@ -4,7 +4,7 @@ define jugador = Character ("Bautista",color="4E4C4E")
 
 
         #PUTO EL QUE LEA
-
+#TU VIEJA ES PUTA
 
 label start:
 
