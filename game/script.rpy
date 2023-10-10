@@ -12,9 +12,11 @@ define jugador = Character ("Bautista",color="4E4C4E")
         #los del turno tarde se la comen
 
 
-label start:
+label start:       
 
 scene tren_fuera_dia
+ 
+show olimpia_escudo
  
 "Te diriges de camino a la escuela en tren como todos los dias"
 "..."
