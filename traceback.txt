@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 122, in script
+    show marina_llorando al right
+Exception: Image 'marina_llorando' does not accept attributes 'al right'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 122, in script
+    show marina_llorando al right
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
+    renpy.config.show(name,
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 499, in _duplicate
+    args.extraneous()
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 362, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'marina_llorando' does not accept attributes 'al right'.
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 8.1.3.23091805
+prueba 1 1.0
+Thu Oct  5 21:11:50 2023
