@@ -9,6 +9,8 @@ define jugador = Character ("Bautista",color="4E4C4E")
         
         #xdxdxdxd lol
 
+        #los del turno tarde se la comen
+
 
 label start:
 
