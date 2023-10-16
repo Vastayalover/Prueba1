@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 78: Only one say menuitem may exist per menu.
-    mujer "nos vemos mas tarde"
-                               ^
-
-File "game/script.rpy", line 83: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "al fin terminaron las clases"
-    ^
-
-File "game/script.rpy", line 89: Line is indented, but the preceding with statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "mierda"
-    ^
+File "game/script.rpy", line 212: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    xaling 0.5 yaling 0 
+               ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Oct 10 02:39:17 2023
+Mon Oct 16 06:18:52 2023
