@@ -1,30 +1,113 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 122, in script
-    show marina_llorando al right
-Exception: Image 'marina_llorando' does not accept attributes 'al right'.
+While loading <renpy.display.im.Image object ('bad_ending_miguelin.jpg') at 0x000000000575af70>:
+  File "renpy/common/00gallery.rpy", line 155, in __call__
+    renpy.invoke_in_new_context(self.gallery.show, self.index)
+  File "renpy/common/00gallery.rpy", line 519, in show
+    result = i.show((button, image) not in unlocked_images, image, len(b.images))
+  File "renpy/common/00gallery.rpy", line 106, in show
+    return ui.interact()
+OSError: Couldn't find file 'bad_ending_miguelin.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 122, in script
-    show marina_llorando al right
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1428, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1391, in show_imspec
-    renpy.config.show(name,
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\exports.py", line 733, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 499, in _duplicate
-    args.extraneous()
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 362, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'marina_llorando' does not accept attributes 'al right'.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4543, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\transition.py", line 53, in event
+    return self.new_widget.event(ev, x, y, st) # E1101
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 770, in event
+    rv = self.child.event(ev, x, y, st)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1142, in event
+    return handle_click(self.clicked)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1075, in handle_click
+    rv = run(action)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 379, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00gallery.rpy", line 155, in __call__
+    renpy.invoke_in_new_context(self.gallery.show, self.index)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\game.py", line 287, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "renpy/common/00gallery.rpy", line 519, in show
+    result = i.show((button, image) not in unlocked_images, image, len(b.images))
+  File "renpy/common/00gallery.rpy", line 106, in show
+    return ui.interact()
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 2061, in render
+    cr = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\transform.py", line 909, in render
+    return RenderTransform(self).render(width, height, st, at)
+  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
+  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 330, in get
+    surf = image.load()
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 803, in load
+    raise e
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 757, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'bad_ending_miguelin.jpg'.
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 8.1.3.23091805
 prueba 1 1.0
-Thu Oct  5 21:11:50 2023
+Tue Oct 17 23:28:28 2023

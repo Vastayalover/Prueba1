@@ -121,6 +121,7 @@ menu:
         "ir con marina":
                 $ir_con=True
                 
+                
 
         "ir con miguelin":
                 $ir_con=False
@@ -173,19 +174,23 @@ label run_marina:
         menu: 
                 "seguro ganamos 3 a 0":
                         jump mufa_lanus 
+                        
         
                 "con suerte empatamos":
                         jump campeon_lanus
+                        
 return
 
 label mufa_lanus:
         scene bad_ending_marina
         "sos un mufa hermano, marina no te quiere ver nunca mas,bad ending"
+        $persistent.end2 = True
 return
 
 label campeon_lanus:
         scene good_ending_marina
         "no la mufaste, lanus salio campeon por penales y ahora ven todos los partidos juntos, good ending"
+        $persistent.end1 = True
 return
 
 label run_miguelin:
@@ -199,9 +204,11 @@ label run_miguelin:
         menu:
                 "seguro ganamos 3 a 0":
                         jump mufa_velez
+                        
 
                 "con suerte empatamos":
                         jump campeon_velez
+                        
 return
 
 label mufa_velez:
@@ -220,10 +227,17 @@ label mufa_velez:
                         linear 0.10 alpha 0 #comienza a desaparecer
 
 
-        "sos un mufa hermano, miguelin y sus 7 hermanos te cagaron a palo por salame,bad ending"
+        "sos un mufa hermano, miguelin y sus hermanos te cagaron a palo por salame,bad ending"
+        $persistent.end4 = True
 return
 
 label campeon_velez:
         scene good_ending_miguelin
         "no la mufaste, velez salio campeon por penales y disfrutaste tremendo azado, good ending"
+        $persistent.end3 = True
+
+return
+
+
+
         

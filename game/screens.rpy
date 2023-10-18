@@ -299,6 +299,8 @@ screen navigation():
 
             textbutton _("Comenzar") action Start()
 
+            textbutton _("Gallery") action ShowMenu("CG_imagenes") #galeria
+
         else:
 
             textbutton _("Historial") action ShowMenu("history")
