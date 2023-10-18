@@ -183,14 +183,18 @@ return
 
 label mufa_lanus:
         scene bad_ending_marina
+        play music "por_mil_noches.mp3"#musica
         "sos un mufa hermano, marina no te quiere ver nunca mas,bad ending"
         $persistent.end2 = True
+        $ renpy.end_replay()
 return
 
 label campeon_lanus:
         scene good_ending_marina
+        play music "the_lost_soul_down.mp3"#musica
         "no la mufaste, lanus salio campeon por penales y ahora ven todos los partidos juntos, good ending"
         $persistent.end1 = True
+        $ renpy.end_replay()
 return
 
 label run_miguelin:
@@ -227,14 +231,18 @@ label mufa_velez:
                         linear 0.10 alpha 0 #comienza a desaparecer
 
 
+        play music "se_re_pudrio.mp3"#musica
         "sos un mufa hermano, miguelin y sus hermanos te cagaron a palo por salame,bad ending"
         $persistent.end4 = True
+        $ renpy.end_replay()
 return
 
 label campeon_velez:
         scene good_ending_miguelin
+        play music "la_cumbia.mp3"#musica
         "no la mufaste, velez salio campeon por penales y disfrutaste tremendo azado, good ending"
         $persistent.end3 = True
+        $ renpy.end_replay()
 
 return
 

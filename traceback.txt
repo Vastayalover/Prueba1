@@ -1,13 +1,17 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('bad_ending_miguelin.jpg') at 0x000000000575af70>:
-  File "renpy/common/00gallery.rpy", line 155, in __call__
-    renpy.invoke_in_new_context(self.gallery.show, self.index)
-  File "renpy/common/00gallery.rpy", line 519, in show
-    result = i.show((button, image) not in unlocked_images, image, len(b.images))
-  File "renpy/common/00gallery.rpy", line 106, in show
-    return ui.interact()
-OSError: Couldn't find file 'bad_ending_miguelin.jpg'.
+While running game code:
+  File "game/galeria_replay.rpy", line 11, in execute
+    screen replay_g:
+  File "game/galeria_replay.rpy", line 11, in execute
+    screen replay_g:
+  File "game/galeria_replay.rpy", line 17, in execute
+    frame:
+  File "game/galeria_replay.rpy", line 21, in execute
+    imagebutton auto"bad_ending_marina.jpg" insensitive"img_bloqueada.jpg" align(0.6, 0.2) action Replay("mufa_lanus")
+  File "renpy/common/00defaults.rpy", line 160, in _imagemap_auto_function
+    rv = auto_param % variant
+TypeError: not all arguments converted during string formatting
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,88 +30,40 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4543, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\transition.py", line 53, in event
-    return self.new_widget.event(ev, x, y, st) # E1101
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 770, in event
-    rv = self.child.event(ev, x, y, st)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
-    rv = d.event(ev, x - xo, y - yo, st)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1142, in event
-    return handle_click(self.clicked)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1075, in handle_click
-    rv = run(action)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\behavior.py", line 379, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00gallery.rpy", line 155, in __call__
-    renpy.invoke_in_new_context(self.gallery.show, self.index)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\game.py", line 287, in invoke_in_new_context
-    return callable(*args, **kwargs)
-  File "renpy/common/00gallery.rpy", line 519, in show
-    result = i.show((button, image) not in unlocked_images, image, len(b.images))
-  File "renpy/common/00gallery.rpy", line 106, in show
-    return ui.interact()
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 2061, in render
-    cr = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 803, in load
-    raise e
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'bad_ending_miguelin.jpg'.
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/galeria_replay.rpy", line 11, in execute
+    screen replay_g:
+  File "game/galeria_replay.rpy", line 11, in execute
+    screen replay_g:
+  File "game/galeria_replay.rpy", line 17, in execute
+    frame:
+  File "game/galeria_replay.rpy", line 21, in execute
+    imagebutton auto"bad_ending_marina.jpg" insensitive"img_bloqueada.jpg" align(0.6, 0.2) action Replay("mufa_lanus")
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 948, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 936, in choice
+    rv = renpy.config.imagemap_auto_function(auto, name)
+  File "renpy/common/00defaults.rpy", line 160, in _imagemap_auto_function
+    rv = auto_param % variant
+TypeError: not all arguments converted during string formatting
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 8.1.3.23091805
 prueba 1 1.0
-Tue Oct 17 23:28:28 2023
+Wed Oct 18 19:32:48 2023

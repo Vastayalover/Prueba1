@@ -299,7 +299,9 @@ screen navigation():
 
             textbutton _("Comenzar") action Start()
 
-            textbutton _("Gallery") action ShowMenu("CG_imagenes") #galeria
+            textbutton _("Galeria") action ShowMenu("CG_imagenes") #galeria
+
+            textbutton _("Galeria Recuerdos") action ShowMenu("replay_g") #galeria de replays
 
         else:
 
