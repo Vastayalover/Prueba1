@@ -1,69 +1,80 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/galeria_replay.rpy", line 11, in execute
-    screen replay_g:
-  File "game/galeria_replay.rpy", line 11, in execute
-    screen replay_g:
-  File "game/galeria_replay.rpy", line 17, in execute
-    frame:
-  File "game/galeria_replay.rpy", line 21, in execute
-    imagebutton auto"bad_ending_marina.jpg" insensitive"img_bloqueada.jpg" align(0.6, 0.2) action Replay("mufa_lanus")
-  File "renpy/common/00defaults.rpy", line 160, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "game/script.rpy", line 35, in script
+    hombre "quionda bautizardo"
+Exception: Could not find font 'CHERL__.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
+  File "game/script.rpy", line 35, in script
+    hombre "quionda bautizardo"
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/galeria_replay.rpy", line 11, in execute
-    screen replay_g:
-  File "game/galeria_replay.rpy", line 11, in execute
-    screen replay_g:
-  File "game/galeria_replay.rpy", line 17, in execute
-    frame:
-  File "game/galeria_replay.rpy", line 21, in execute
-    imagebutton auto"bad_ending_marina.jpg" insensitive"img_bloqueada.jpg" align(0.6, 0.2) action Replay("mufa_lanus")
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 948, in _imagebutton
-    idle = choice(idle, idle_image, "idle", required=True)
-  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\ui.py", line 936, in choice
-    rv = renpy.config.imagemap_auto_function(auto, name)
-  File "renpy/common/00defaults.rpy", line 160, in _imagemap_auto_function
-    rv = auto_param % variant
-TypeError: not all arguments converted during string formatting
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\text\text.py", line 2171, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\text\text.py", line 665, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\text\text.py", line 257, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\text\font.py", line 721, in get_font
+    face = load_face(fn)
+  File "D:\Dev\Motores\renpy-8.1.3-sdk\renpy\text\font.py", line 662, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'CHERL__.ttf'.
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 8.1.3.23091805
 prueba 1 1.0
-Wed Oct 18 19:32:48 2023
+Wed Oct 18 23:02:34 2023

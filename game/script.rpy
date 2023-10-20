@@ -1,6 +1,7 @@
 ﻿define mujer = Character ("Marina", color="#d42845")
-define hombre = Character ("Miguelin",color="#3343AA")
-define jugador = Character ("Bautista",color="4E4C4E")
+define hombre = Character ("Miguelin",color="#3343AA",text_font = "GOODDC__.ttf")
+define oak = Character("OAK")
+define mn = DynamicCharacter ("mi_nombre",color="4E4C4E") #nombre del personaje cambiable
 
 
         #PUTO EL QUE LEA
@@ -13,6 +14,8 @@ define jugador = Character ("Bautista",color="4E4C4E")
         
         #son re giles loco
 
+$mi_nombre = ""
+
 
 label start:       
 
@@ -21,10 +24,48 @@ label start:
 scene tren_fuera_dia
  
 show olimpia_escudo
- 
+
 "Te diriges de camino a la escuela en tren como todos los dias"
 "..."
-"preferirias no ir, el bullying por llamarte bautista esta presente todos los dias"
+ 
+show prof_oak
+
+oak "¡Hola!
+Este es el mundo POKEMON"
+
+oak "¡Me llamo OAK!"
+oak "Pero la gente me llama PROFESOR POKEMON"
+oak "este mundo esta..."
+
+show nidoran_hembra
+
+oak "habitado por unas criaturas llamadas POKEMON"
+oak "Para algunos los pokemon son mascotas. Pero otros los usan para pelear"
+oak "en cuanto a mi"
+oak "estudio los pokemon como profesion"
+
+hide nidoran_hembra
+
+oak "bueno, cuentame algo de ti"
+
+"Hola, ¿eres chico o chica?"
+
+menu:
+        "chico":
+                "epico"
+
+        "chica":
+                "god"
+
+"pero primero dime como te llamas"
+
+$mi_nombre = renpy.input("Escribe tu nombre") #definir tu nombre a travez del teclado
+
+mn "mi nombre es [mi_nombre]"
+
+hide prof_oak
+
+"preferirias no ir, el bullying por llamarte [mi_nombre] esta presente todos los dias"
 "..."
 "aun asi vas, tal vez hoy sea un buen dia"
 
@@ -32,8 +73,14 @@ show miguelin3:
 
 play music "la_cumbia.mp3" fadeout 5.0 fadein 5.0
 
-hombre "quionda bautizardo"
-jugador "todo bien pa?"
+if mi_nombre=="miguelin":
+        hombre "que nombre de mierda tenes"
+else:
+        hombre "quionda [mi_nombre]"
+
+
+
+mn "todo bien pa?"
 hombre "estoy re manija"
 hombre "hoy juega veleeeeeeeez"
 hombre "te pinta la previa con unos choris en mi casa? :D"
