@@ -1,4 +1,13 @@
-﻿define mujer = Character ("Marina", color="#d42845")
+﻿init:
+        $money_points = 0 #puntos de plata
+        $miguelin_points = 10 #puntos de miguelin
+        $marina_points = 10 #puntos de marina
+
+
+
+
+
+define mujer = Character ("Marina", color="#d42845")
 define hombre = Character ("Miguelin",color="#3343AA",text_font = "GOODDC__.ttf")
 define oak = Character("OAK")
 define mn = DynamicCharacter ("mi_nombre",color="4E4C4E") #nombre del personaje cambiable
@@ -91,10 +100,13 @@ menu:
         "De una wacho":
                         call respuesta4
                         $ir_con_miguelin =True
+                        $money_points +=2
+                        $miguelin_points +=5
 
         "Dejame que lo piense":
                                 call respuesta5
                                 $ir_con_miguelin = False
+                                $miguelin_points -=5
 
 stop music
 hide miguelin3 with dissolve
@@ -248,8 +260,20 @@ label run_miguelin:
         #ruta de miguelin
         scene casa_miguelin
         show miguelin3 with dissolve
-        play music "la_cumbia.mp3" fadein 5.0
+        #play music "la_cumbia.mp3" fadein 5.0
         hombre "bienvenido al rancho pa"
+
+        if money_points ==2:
+                hombre "si tenes 2 pesos compra pa el asado"
+        elif money_points <=1:
+                hombre "estas re pobre gato"
+
+
+        if miguelin_points >=10:
+                hombre "servite lo que quieras pa"
+        elif miguelin_points <=9:
+                hombre "vos comes ensalada nomas"
+
         hombre "como pensas que salios hoy?"
 
         menu:

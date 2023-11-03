@@ -303,6 +303,8 @@ screen navigation():
 
             textbutton _("Galeria Recuerdos") action ShowMenu("replay_g") #galeria de replays
 
+            textbutton _("Citas") action Start("citas_p") #sistema de citas
+
         else:
 
             textbutton _("Historial") action ShowMenu("history")
