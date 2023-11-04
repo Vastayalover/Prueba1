@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/citas_point.rpy", line 7: invalid syntax
-    Character ("Matilde", color "#ff7f07")
-                                 ^
-
-File "game/citas_point.rpy", line 8: invalid syntax
-    Character ("Ema", color "#d42845")
-                             ^
-
-File "game/citas_point.rpy", line 9: invalid syntax
-    Character ("Violeta", color "#5e178d")
-                                 ^
+File "game/citas_point.rpy", line 19: end of line expected.
+    frame: align (0.0, 0.0) 
+           ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Thu Nov  2 21:02:45 2023
+Sat Nov  4 15:24:41 2023
